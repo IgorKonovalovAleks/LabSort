@@ -9,6 +9,17 @@ void swap(int* arr, int i, int j) {
 
 }
 
+bool control(int n, int* arr, int* ptr) {
+	for (int i = 0; i < n - 1; i++) {
+		if (arr[i] > arr[i + 1]) {
+			*ptr = i;
+			return false;
+		}
+	}
+	*ptr = -1;
+	return true;
+}
+
 void merge(int n1, int n2, int* left, int* right, int* res) {
 
 	int i = 0, j = 0;
@@ -57,7 +68,7 @@ void bubble_sort(int n, int* arr) {
 }
 
 
-void ins_sort(int n, int* arr) {
+void select_sort(int n, int* arr) {
 	
 	
 	for (int i = 0; i < n; i++) {
@@ -122,7 +133,7 @@ void quick_sort(int n, int* arr) {
 	}
 
 	quick_sort(j, arr);
-	quick_sort(n - j - 1, arr + j + 1);
+	quick_sort(n - j, arr + j);
 
 }
 
@@ -140,8 +151,14 @@ void test(void (*fPtr)(int, int*), int* a, int n) {
 		end = clock();
 
 		printf("%d ", end - start);
+		int b;
+		if (!control(n, a, &b))
+			printf("fail %d " , b);
+		else
+			printf("success ");
 		refresh(a, n);
 	}
+	printf("\n");
 
 }
 

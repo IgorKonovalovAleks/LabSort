@@ -25,7 +25,11 @@ int main() {
 	refresh(c, n1 * 3);
 	refresh(d, n1 * 4);
 	
-	
+	//int e[16] = { 1, 4, 5, 2, 3, 2, 7, 6, 3, 0, 14, 8, 128371, 1783618, 781236, 882 };
+	//quick_sort(16, e);
+	//for (int i = 0; i < 16; i++) {
+	//	printf("%d ", e[i]);
+	//}
 	
 	printf("Bubble sort 30000 elements:\n");
 	test(&bubble_sort, a, n1);
@@ -36,14 +40,14 @@ int main() {
 	printf("\n4x:\n");
 	test(&bubble_sort, d, n1 * 4);
 	
-	printf("\nInsert sort 30000 elements:\n");
-	test(&ins_sort, a, n1);
-	printf("\nInsert sort 2x elements:\n");
-	test(&ins_sort, b, n1 * 2);
+	printf("\nselect sort 30000 elements:\n");
+	test(&select_sort, a, n1);
+	printf("\nselect sort 2x elements:\n");
+	test(&select_sort, b, n1 * 2);
 	printf("\n3x:\n");
-	test(&ins_sort, c, n1 * 3);
+	test(&select_sort, c, n1 * 3);
 	printf("\n4x:\n");
-	test(&ins_sort, d, n1 * 4);
+	test(&select_sort, d, n1 * 4);
 	
 	
 	free(a);
@@ -78,11 +82,7 @@ int main() {
 	printf("\n4x:\n");
 	test(&quick_sort, d, n2 * 4);
 
-	//int e[10] = { 1, 4, 5, 2, 3, 2, 7, 6, 3, 0 };
-	//quick_sort(10, e);
-	//for (int i = 0; i < 10; i++) {
-	//	printf("%d ", e[i]);
-	//}
+	
 
 	
 	free(a);

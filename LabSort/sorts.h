@@ -7,7 +7,9 @@ void swap(int* arr, int i, int j);
 
 void bubble_sort(int n, int* arr);
 
-void ins_sort(int n, int* arr);
+void select_sort(int n, int* arr);
+
+bool control(int n, int* arr, int* ptr);
 
 void merge_sort(int n, int* arr);
 
