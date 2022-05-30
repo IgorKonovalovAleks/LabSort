@@ -39,6 +39,11 @@ int main() {
 	test(&bubble_sort, c, n1 * 3);
 	printf("\n4x:\n");
 	test(&bubble_sort, d, n1 * 4);
+
+	refresh(a, n1);
+	refresh(b, n1 * 2);
+	refresh(c, n1 * 3);
+	refresh(d, n1 * 4);
 	
 	printf("\nselect sort 30000 elements:\n");
 	test(&select_sort, a, n1);
@@ -72,6 +77,11 @@ int main() {
 	test(&merge_sort, c, n2 * 3);
 	printf("\n4x:\n");
 	test(&merge_sort, d, n2 * 4);
+
+	refresh(a, n1);
+	refresh(b, n1 * 2);
+	refresh(c, n1 * 3);
+	refresh(d, n1 * 4);
 
 	printf("\nQuick sort 10000000 elements:\n");
 	test(&quick_sort, a, n2);
